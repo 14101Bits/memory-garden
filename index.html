@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f3" />
+    <meta name="description" content="Memory Garden — 在 Mac 上用你喜欢的方式复习 Anki。" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Memory Garden · 让记忆自然生长</title>
+  </head>
+  <body data-theme="light">
+    <div class="shell">
+      <aside class="sidebar" aria-label="侧边导航">
+        <a class="brand" href="#home" aria-label="Memory Garden 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 32V17M20 24c-9-1-12-7-10-12 7 0 12 4 10 12ZM20 20c1-9 7-13 12-12 0 8-5 13-12 12Z" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 33h14" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>
+          </span>
+          <span class="brand-type">memory<span>garden</span><small>YOUR DAILY RECALL</small></span>
+        </a>
+        <div class="sidebar-section-label">WORKSPACE</div>
+        <nav class="main-nav">
+          <button id="nav-home" class="nav-link active" type="button"><span class="nav-icon">◫</span> 概览</button>
+          <button id="nav-focus" class="nav-link" type="button"><span class="nav-icon">◇</span> 开始复习</button>
+          <button id="nav-refresh" class="nav-link" type="button"><span class="nav-icon">↻</span> 刷新数据</button>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-note"><div class="sidebar-note-leaf">✳</div><p>不要追求全部记住。</p><span>今天记住一点，就很好。</span></div>
+        <div class="sidebar-bottom">
+          <button id="theme-toggle" class="theme-button" type="button"><span id="theme-glyph">☾</span><span id="theme-label">深色外观</span><span class="theme-end">↗</span></button>
+          <div id="side-connection" class="connection"><span class="connection-dot"></span><span>正在检查 Anki...</span></div>
+        </div>
+      </aside>
+      <div class="page-column">
+        <header class="topbar">
+          <div class="breadcrumbs"><span class="breadcrumbs-root">MY SPACE</span><span class="separator">/</span><strong id="breadcrumb-title">概览</strong></div>
+          <div class="topbar-actions"><span id="clock" class="clock"></span><button id="top-sync" type="button" class="button button-ghost button-small">↻ 同步 AnkiWeb</button><span class="avatar" aria-label="个人空间">MG</span></div>
+        </header>
+        <main id="app" class="page-content" tabindex="-1"></main>
+        <footer class="app-footer"><span>MEMORY GARDEN / LOCAL FIRST</span><span>专为安静地学习而设计</span></footer>
+      </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
